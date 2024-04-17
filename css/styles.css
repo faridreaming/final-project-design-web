@@ -64,7 +64,9 @@ footer {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5));
   color: #fff;
   padding: 10px 0;
+  width: 100%;
   text-align: center;
+  bottom: 0;
 }
 .resized-image {
   width: auto; /* Set the desired width */

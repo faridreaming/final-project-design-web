@@ -64,11 +64,14 @@ footer {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5));
   color: #fff;
   padding: 10px 0;
+  width: 100%;
   text-align: center;
+  bottom: 0;
 }
 .resized-image {
   width: auto; /* Set the desired width */
   height: auto; /* Maintain aspect ratio by setting height to auto */
+  outline: 1px solid red;
 }
 .hero {
   height: 0px; /* Sesuaikan dengan tinggi gambar yang diblurkan */

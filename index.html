@@ -1,74 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login Page</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-        }
-        .login-container {
-            width: 300px;
-            margin: 0 auto;
-            margin-top: 100px;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        .login-container h2 {
-            text-align: center;
-        }
-        .login-form input[type="text"],
-        .login-form input[type="password"] {
-            width: calc(100% - 20px);
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-        }
-        .login-form input[type="submit"] {
-            width: 100%;
-            padding: 10px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 3px;
-            cursor: pointer;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+      }
+      .login-container {
+        width: 300px;
+        margin: 0 auto;
+        margin-top: 100px;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .login-container h2 {
+        text-align: center;
+      }
+      .login-form input[type="text"],
+      .login-form input[type="password"] {
+        width: calc(100% - 20px);
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+      }
+      .login-form input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="login-container">
-        <h2>Login</h2>
-        <form class="login-form" id="loginForm">
-            <input type="text" name="username" id="username" placeholder="Username" required>
-            <input type="password" name="password" id="password" placeholder="Password" required>
-            <input type="submit" value="Login">
-        </form>
+      <h2>Login</h2>
+      <form class="login-form" id="loginForm">
+        <input type="text" name="username" id="username" placeholder="Username" required />
+        <input type="password" name="password" id="password" placeholder="Password" required />
+        <input type="submit" value="Login" />
+      </form>
     </div>
 
     <script>
-        document.getElementById('loginForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent default form submission
-            
-            // Simpan nilai username dan password dari formulir
-            var username = document.getElementById('username').value;
-            var password = document.getElementById('password').value;
+      document.getElementById("loginForm").addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent default form submission
 
-            // Di sini Anda bisa melakukan validasi username dan password
-            // Misalnya, Anda bisa memeriksa apakah kombinasi username dan password benar
-            // Di sini kita hanya memeriksa apakah kedua bidang diisi atau tidak
+        // Simpan nilai username dan password dari formulir
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
 
-            if (username && password) {
-                // Jika login berhasil, arahkan ke halaman index.html
-                window.location.href = 'homepage.html';
-            } else {
-                alert('Username dan password harus diisi.');
-            }
-        });
+        // Di sini Anda bisa melakukan validasi username dan password
+        // Misalnya, Anda bisa memeriksa apakah kombinasi username dan password benar
+        // Di sini kita hanya memeriksa apakah kedua bidang diisi atau tidak
+
+        if (username && password) {
+          // Jika login berhasil, arahkan ke halaman index.html
+          window.location.href = "home-page.html";
+        } else {
+          alert("Username dan password harus diisi.");
+        }
+      });
     </script>
-</body>
+  </body>
 </html>

@@ -71,6 +71,7 @@ footer {
 .resized-image {
   width: auto; /* Set the desired width */
   height: auto; /* Maintain aspect ratio by setting height to auto */
+  outline: 1px solid red;
 }
 .hero {
   height: 0px; /* Sesuaikan dengan tinggi gambar yang diblurkan */

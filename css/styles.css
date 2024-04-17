@@ -41,6 +41,35 @@ main {
   padding: 20px;
 }
 
+/* CSS TENTANG KAMI */
+.card-wrapper{
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.card-wrapper p {
+  text-align: center;
+}
+
+.card img{
+  width: 180px;
+  border-radius: 50%;
+  aspect-ratio: 1;
+}
+.hr{
+  margin-top: 50px; 
+  margin-bottom: 50px;
+  border: none;
+  border-top: 2px solid black;
+}
+.say p{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
 section {
   background-color: #fff;
   margin-bottom: 20px;

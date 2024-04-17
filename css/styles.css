@@ -23,6 +23,7 @@ header {
   background-size: cover;
   color: #fff;
   padding: 20px 0;
+  padding-inline: 1rem;
 }
 
 header h1 {
@@ -43,10 +44,6 @@ nav ul li a {
   color: #fff;
   text-decoration: none;
   font-size: 18px;
-}
-
-main {
-  padding: 20px;
 }
 
 /* CSS TENTANG KAMI */
@@ -84,8 +81,8 @@ section {
   background-color: #fff;
   margin-bottom: 20px;
   padding: 0px;
-  border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding-inline: 1rem;
 }
 
 section h2 {
@@ -116,11 +113,10 @@ footer {
   outline: 1px solid red;
 }
 
-.hero {
-  height: 0px;
-  /* Sesuaikan dengan tinggi gambar yang diblurkan */
-  filter: blur(10px);
-  /* Efek blur */
+/* Main styling */
+main {
+  margin: 0;
+  padding: 0;
 }
 
 /* Tabel styling */

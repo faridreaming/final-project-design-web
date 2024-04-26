@@ -6,6 +6,9 @@
     <title>Login Page</title>
     <style>
       body {
+        background-image: url(https://s.kaskus.id/images/2013/07/11/5654433_20130711033348.gif);
+        background-size: 100%;
+        background-repeat: no-repeat;
         font-family: Arial, sans-serif;
         background-color: #f4f4f4;
       }
@@ -61,7 +64,7 @@
   <body>
     <div class="login-container">
       <h2>Login</h2>
-      <form class="login-form" id="loginForm">
+      <form class="login-form" id="loginForm" onsubmit="return login()">
         <input
           type="text"
           name="username"
@@ -79,28 +82,13 @@
         <input type="submit" value="Login" />
       </form>
     </div>
-
     <script>
-      document
-        .getElementById("loginForm")
-        .addEventListener("submit", function (event) {
-          event.preventDefault(); // Prevent default form submission
-
-          // Simpan nilai username dan password dari formulir
-          var username = document.getElementById("username").value;
-          var password = document.getElementById("password").value;
-
-          // Di sini Anda bisa melakukan validasi username dan password
-          // Misalnya, Anda bisa memeriksa apakah kombinasi username dan password benar
-          // Di sini kita hanya memeriksa apakah kedua bidang diisi atau tidak
-
-          if (username && password) {
-            // Jika login berhasil, arahkan ke halaman index.html
-            window.location.href = "home-page.html";
-          } else {
-            alert("Username dan password harus diisi.");
-          }
-        });
+      function login() {
+        var username = document.getElementById('username').value;
+        alert("Selamat datang, " + username + "!");
+        window.location.href = "home-page.html";
+        return false; // untuk mencegah form submit
+      }
     </script>
   </body>
 </html>

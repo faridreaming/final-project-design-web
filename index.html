@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login Page</title>
+    <title>Food Blog | Login</title>
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png" />
@@ -18,15 +18,36 @@
   </head>
   <body>
     <div class="container">
-      <img src="assets/imgs/login.webp" alt="Login" class="login-img" />
-      <form class="login-form" id="loginForm" onsubmit="return login()">
-        <h2>Halaman Login Food Blog</h2>
-        <input type="text" name="username" id="username" placeholder="Username" required />
-        <input type="password" name="password" id="password" placeholder="Password" required />
-        <button type="submit">Login</button>
-        <p>Belum punya akun? Registrasi <a href="register.html">disini</a></p>
+      <img src="assets/imgs/login.webp" alt="Hero" class="hero-img" />
+      <form class="form" id="login-form">
+        <h2 class="header-text">Login Food Blog</h2>
+        <div class="input-group">
+          <input type="text" name="username" id="username" placeholder="Username" required autofocus />
+          <input type="password" name="password" id="password" placeholder="Password" required />
+          <button type="submit" class="btn">Login</button>
+        </div>
+        <p>Belum punya akun? Registrasi <a href="register.html">di sini</a></p>
       </form>
     </div>
-    <script src="script.js"></script>
+    <script>
+      const loginForm = document.getElementById("login-form");
+      loginForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+        login();
+      });
+
+      function login() {
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+        const users = JSON.parse(localStorage.getItem("users")) || [];
+        const user = users.find((user) => user.username === username && user.password === password);
+        if (!user) {
+          alert("Username atau password salah!");
+          return false;
+        }
+        alert("Login berhasil!");
+        window.location.href = "app.html";
+      }
+    </script>
   </body>
 </html>

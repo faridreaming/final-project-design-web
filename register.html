@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Blog | Registrasi</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png" />
+    <link rel="manifest" href="assets/favicons/site.webmanifest" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <img src="assets/imgs/register.webp" alt="Hero" class="hero-img" />
+      <form class="form" id="register-form" method="post">
+        <h2 class="header-text">Registrasi Food Blog</h2>
+        <div class="input-group">
+          <input type="text" name="username" id="username" placeholder="Username" required autofocus />
+          <input type="password" name="password" id="password" placeholder="Password" required />
+          <input type="password" name="confirm-password" id="confirm-password" placeholder="Konfirmasi Password" required />
+          <button type="submit" class="btn">Registrasi</button>
+        </div>
+        <p>Sudah punya akun? Login <a href="index.html">di sini</a></p>
+      </form>
+    </div>
+    <script>
+      const registerForm = document.getElementById("register-form");
+      registerForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+        register();
+      });
+
+      function register() {
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+        const confirmPassword = document.getElementById("confirm-password").value;
+        const users = JSON.parse(localStorage.getItem("users")) || [];
+        if (users.some((user) => user.username === username)) {
+          alert(`Username ${username} sudah terdaftar!`);
+          return false;
+        }
+        if (password !== confirmPassword) {
+          alert("Password tidak sama!");
+          return false;
+        }
+        users.push({ username, password });
+        localStorage.setItem("users", JSON.stringify(users));
+        alert("Registrasi berhasil!");
+        window.location.href = "index.html";
+      }
+    </script>
+  </body>
+</html>

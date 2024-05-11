@@ -4,91 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login Page</title>
-    <style>
-      body {
-        background-image: url(https://s.kaskus.id/images/2013/07/11/5654433_20130711033348.gif);
-        background-size: 100%;
-        background-repeat: no-repeat;
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
-      }
-      .login-container {
-        width: 300px;
-        margin: 0 auto;
-        margin-top: 100px;
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 5px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      }
-      .login-container h2 {
-        text-align: center;
-      }
-      .login-form input[type="text"],
-      .login-form input[type="password"] {
-        width: calc(100% - 20px);
-        padding: 10px;
-        margin-bottom: 10px;
-        border: 1px solid #ccc;
-        border-radius: 3px;
-      }
-      .login-form input[type="submit"] {
-        width: 100%;
-        padding: 10px;
-        background-color: #007bff;
-        color: #fff;
-        border: none;
-        border-radius: 3px;
-        cursor: pointer;
-      }
-    </style>
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="assets/favicons/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="assets/favicons/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="assets/favicons/favicon-16x16.png"
-    />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png" />
     <link rel="manifest" href="assets/favicons/site.webmanifest" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div class="login-container">
-      <h2>Login</h2>
+    <div class="container">
+      <img src="assets/imgs/login.webp" alt="Login" class="login-img" />
       <form class="login-form" id="loginForm" onsubmit="return login()">
-        <input
-          type="text"
-          name="username"
-          id="username"
-          placeholder="Username"
-          required
-        />
-        <input
-          type="password"
-          name="password"
-          id="password"
-          placeholder="Password"
-          required
-        />
-        <input type="submit" value="Login" />
+        <h2>Halaman Login Food Blog</h2>
+        <input type="text" name="username" id="username" placeholder="Username" required />
+        <input type="password" name="password" id="password" placeholder="Password" required />
+        <button type="submit">Login</button>
+        <p>Belum punya akun? Registrasi <a href="register.html">disini</a></p>
       </form>
     </div>
-    <script>
-      function login() {
-        var username = document.getElementById('username').value;
-        alert("Selamat datang, " + username + "!");
-        window.location.href = "home-page.html";
-        return false; // untuk mencegah form submit
-      }
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>

@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+}
+
+body {
+  height: 100dvh;
+  background-image: linear-gradient(107.7deg, rgba(235, 230, 44, 0.55) 8.4%, rgba(252, 152, 15, 1) 90.3%);
+  display: grid;
+  place-content: center;
+}
+
+body,
+input,
+button {
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 3rem 3rem 6rem hsla(25, 88%, 42%, 0.5);
+}
+
+.login-img {
+  width: 35rem;
+  height: 35rem;
+  object-fit: cover;
+  object-position: left;
+}
+
+.login-form {
+  display: grid;
+  place-content: center;
+  padding: 2rem;
+}

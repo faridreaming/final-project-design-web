@@ -1,0 +1,45 @@
+:root {
+  --basic-border-radius: 0.25rem;
+  --basic-transition: 0.3s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+}
+
+body {
+}
+
+body,
+input,
+button {
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  background-color: red;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: fit-content;
+}
+
+.logo img {
+  height: 4rem;
+}
+
+.logo p {
+  font-weight: 500;
+  font-size: 1.25rem;
+}

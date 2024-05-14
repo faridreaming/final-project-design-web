@@ -1,6 +1,8 @@
 :root {
   --basic-border-radius: 0.25rem;
-  --basic-transition: 0.3s;
+  --basic-transition: 0.25s;
+  --basic-border-style: 0.1rem solid var(--color-4);
+  --color-dark: #1a1a1a;
   --color-1: #dd761c;
   --color-1-75: #dd761cbe;
   --color-1-50: #dd761c80;
@@ -31,8 +33,8 @@
 }
 
 body {
-  background-color: var(--color-8);
-  color: var(--color-1);
+  background-color: var(--color-4);
+  color: var(--color-dark);
   font-size: 1rem;
   line-height: 1.5;
   overflow-x: hidden;
@@ -41,6 +43,7 @@ body {
 .container {
   max-width: 65rem;
   margin: 0 auto;
+  padding: 1rem 2rem;
 }
 
 body,
@@ -55,7 +58,15 @@ a {
 }
 
 header {
-  background-color: var(--color-4);
+  background-color: var(--color-s-1);
+  border-bottom: 0.125rem solid var(--color-3);
+  color: var(--color-4);
+}
+
+header .container {
+  display: grid;
+  grid-template-columns: auto;
+  row-gap: 1rem;
 }
 
 .logo {
@@ -69,7 +80,34 @@ header {
   height: 4rem;
 }
 
-.logo p {
+.logo p,
+.page-title {
   font-weight: 500;
   font-size: 1.25rem;
+}
+
+.page-title {
+  display: flex;
+  align-items: center;
+  border-left: 0.15rem solid var(--color-4);
+  padding-left: 0.65rem;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+}
+
+.navbar ul li a {
+  transition: var(--basic-transition);
+  text-decoration: underline;
+  text-decoration-thickness: 0.125rem;
+  text-underline-offset: 0.5rem;
+  text-decoration-color: transparent;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+  text-decoration-color: var(--color-2);
 }

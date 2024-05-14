@@ -1,6 +1,14 @@
 :root {
   --basic-border-radius: 0.25rem;
   --basic-transition: 0.3s;
+  --color-1: #242423;
+  --color-2: #2c3126;
+  --color-3: #343e28;
+  --color-4: #868a7c;
+  --color-5: #b5a998;
+  --color-6: #e3c8b4;
+  --color-7: #efddd1;
+  --color-8: #fffef8;
 }
 
 * {
@@ -11,6 +19,11 @@
 }
 
 body {
+  background-color: var(--color-8);
+  color: var(--color-1);
+  font-size: 1rem;
+  line-height: 1.5;
+  overflow-x: hidden;
 }
 
 body,

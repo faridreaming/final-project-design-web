@@ -1,0 +1,113 @@
+:root {
+  --basic-border-radius: 0.25rem;
+  --basic-transition: 0.25s;
+  --basic-border-style: 0.1rem solid var(--color-4);
+  --color-dark: #1a1a1a;
+  --color-1: #dd761c;
+  --color-1-75: #dd761cbe;
+  --color-1-50: #dd761c80;
+  --color-1-25: #dd761c40;
+  --color-2: #feb941;
+  --color-2-75: #feb941be;
+  --color-2-50: #feb94180;
+  --color-2-25: #feb94140;
+  --color-3: #fde49e;
+  --color-3-75: #fde49ebe;
+  --color-3-50: #fde49e80;
+  --color-3-25: #fde49e40;
+  --color-4: #f7f7f7;
+  --color-4-75: #f7f7f7be;
+  --color-4-50: #f7f7f780;
+  --color-4-25: #f7f7f740;
+  --color-s-1: #6dc5d1;
+  --color-s-1-75: #6dc5d1be;
+  --color-s-1-50: #6dc5d180;
+  --color-s-1-25: #6dc5d140;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+}
+
+body {
+  background-color: var(--color-4);
+  color: var(--color-dark);
+  font-size: 1rem;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 65rem;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+}
+
+body,
+input,
+button {
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  background-color: var(--color-s-1);
+  border-bottom: 0.125rem solid var(--color-3);
+  color: var(--color-4);
+}
+
+header .container {
+  display: grid;
+  grid-template-columns: auto;
+  row-gap: 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: fit-content;
+}
+
+.logo img {
+  height: 4rem;
+}
+
+.logo p,
+.page-title {
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+
+.page-title {
+  display: flex;
+  align-items: center;
+  border-left: 0.15rem solid var(--color-4);
+  padding-left: 0.65rem;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+}
+
+.navbar ul li a {
+  transition: var(--basic-transition);
+  text-decoration: underline;
+  text-decoration-thickness: 0.125rem;
+  text-underline-offset: 0.5rem;
+  text-decoration-color: transparent;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+  text-decoration-color: var(--color-2);
+}

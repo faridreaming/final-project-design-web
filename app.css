@@ -3,6 +3,9 @@
   --basic-transition: 0.25s;
   --basic-border-style: 0.1rem solid var(--color-4);
   --color-dark: #1a1a1a;
+  --color-dark-75: #1a1a1abe;
+  --color-dark-50: #1a1a1a80;
+  --color-dark-25: #1a1a1a40;
   --color-1: #dd761c;
   --color-1-75: #dd761cbe;
   --color-1-50: #dd761c80;
@@ -69,6 +72,31 @@ header .container {
   row-gap: 1rem;
 }
 
+.btn {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  border-radius: var(--basic-border-radius);
+  background-color: var(--color-1);
+  color: var(--color-4);
+  transition: var(--basic-transition);
+  font-weight: 500;
+}
+
+.btn-outline {
+  background-color: var(--color-dark-25);
+  border: 0.1rem solid var(--color-4);
+}
+
+.btn:hover {
+  background-color: hsl(28, 78%, 54%);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-dark-50);
+}
+
 .logo {
   display: flex;
   align-items: center;
@@ -94,9 +122,13 @@ header .container {
 }
 
 .navbar ul {
-  display: flex;
+  display: grid;
   list-style: none;
-  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  place-items: center;
 }
 
 .navbar ul li a {
@@ -110,4 +142,70 @@ header .container {
 .navbar ul li a:hover,
 .navbar ul li a.active {
   text-decoration-color: var(--color-2);
+}
+
+.hero {
+  background-image: url(assets/imgs/hero.webp);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero .container {
+  position: relative;
+  height: 40rem;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--color-4);
+}
+
+.hero .container h1 {
+  font-size: 3rem;
+  text-shadow: 0 0 1rem var(--color-1-25);
+}
+
+.hero .container p {
+  text-shadow: 0 0 0.25rem var(--color-1-50);
+}
+
+.hero .hero-btn-wrapper {
+  display: flex;
+  gap: 0.5rem;
+}
+
+main .container {
+  line-height: 2rem;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+main .container h1 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+main .container p {
+  margin-bottom: 1rem;
+}
+
+.figure {
+  width: 20rem;
+  object-fit: cover;
+  object-position: center;
+  border-radius: var(--basic-border-radius);
+}
+
+main .container,
+footer .container {
+  padding: 4rem 2rem;
+}
+
+footer {
+  text-align: center;
+  background-color: var(--color-s-1);
+  color: var(--color-4);
 }

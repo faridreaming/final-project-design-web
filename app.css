@@ -32,6 +32,9 @@
   margin: 0;
   padding: 0;
   outline: none;
+}
+
+*:not(table, thead, tbody, tr, th, td) {
   border: none;
 }
 
@@ -62,8 +65,13 @@ a {
 
 header {
   background-color: var(--color-s-1);
-  border-bottom: 0.125rem solid var(--color-3);
   color: var(--color-4);
+  border-bottom: 0.125rem solid var(--color-3);
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  right: 0;
+  position: sticky;
 }
 
 header .container {
@@ -177,7 +185,6 @@ header .container {
 
 main .container {
   line-height: 2rem;
-  text-align: justify;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -189,6 +196,11 @@ main .container h1 {
 }
 
 main .container p {
+  text-align: justify;
+}
+
+main .container p,
+main .container h2 {
   margin-bottom: 1rem;
 }
 
@@ -202,6 +214,109 @@ main .container p {
 main .container,
 footer .container {
   padding: 4rem 2rem;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background-color: var(--color-4);
+  border-radius: 0.5rem;
+  border: 0.25rem solid var(--color-dark-25);
+  padding: 1rem;
+  height: fit-content;
+  transition: var(--basic-transition);
+  cursor: default;
+}
+
+.card .profile-img {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card h2,
+.card h3 {
+  font-weight: 600;
+}
+
+.icon-wrapper {
+  display: flex;
+  gap: 1rem;
+}
+
+.icon-wrapper img {
+  width: 3rem;
+  height: 4rem;
+  transition: var(--basic-transition);
+  object-fit: contain;
+  filter: grayscale(100%);
+}
+
+.card:hover {
+  border-color: var(--color-dark-50);
+}
+
+.card:hover .icon-wrapper img {
+  filter: grayscale(0);
+}
+
+.card .btn {
+  padding: 0.25rem 1rem;
+}
+
+.card-menu .card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.card-menu .card-content {
+  padding: 1rem;
+}
+
+.card-menu .card img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.list table {
+  width: 100%;
+}
+
+.food-list table th {
+  background-color: var(--color-2);
+}
+
+.drink-list table th {
+  background-color: var(--color-3);
+}
+
+table {
+  border-collapse: collapse;
+  border-radius: var(--basic-border-radius);
+  border-width: 0.125rem;
+}
+
+table,
+th,
+td {
+  border-color: var(--color-dark-75);
+  border-style: solid;
+}
+
+th {
+  font-weight: 600;
+}
+
+th,
+td {
+  padding: 0.5rem;
 }
 
 footer {

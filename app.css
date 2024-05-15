@@ -152,6 +152,11 @@ header .container {
   text-decoration-color: var(--color-2);
 }
 
+.navbar ul li a.logout-button:hover {
+  text-decoration-color: transparent;
+  color: var(--color-4-75);
+}
+
 .hero {
   background-image: url(assets/imgs/hero.webp);
   background-size: cover;

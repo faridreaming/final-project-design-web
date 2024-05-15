@@ -111,3 +111,166 @@ header .container {
 .navbar ul li a.active {
   text-decoration-color: var(--color-2);
 }
+
+/* CONTACT CSS */
+.container-wrapper{
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  padding-top: 2rem;
+}
+.container{
+  margin-top: 30vh;
+  text-align: center;
+}
+
+.container h1{
+  padding: 10px;
+}
+
+.container p{
+  padding: 10px;
+}
+
+.costum-hr{
+  width: 20%;
+  margin: 0 auto;
+  border: 2px solid #333;
+}
+
+.main-content-left{
+  display: flex;
+  padding: 1rem;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--color-3-75);
+  border-radius: 28px;
+  margin-right: 100px;
+  margin-bottom: 20px;
+}
+
+.contact-dsc{
+  padding: 1rem;
+}
+
+.contact-title{
+  font-size: 24px;
+  margin-left: 10px;
+}
+
+.form{
+  padding: 1rem;
+}
+
+.form-col{
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  flex-direction: column;
+}
+
+.form-label{
+  font-weight: bold;
+}
+
+.input-name, .input-email, .input-subject, .input-message {
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+}
+
+.input-name, .input-email, .input-subject, .input-message:focus{
+  outline: none;
+}
+
+.form-button-container{
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+.form-button{
+  padding: 1rem;
+  background-color: black;
+  color: white;
+  font-weight: 800;
+  border: none;
+  width: 100%;
+  border-radius:5px;
+}
+
+.contact-paragraf{
+  margin: 10px;
+}
+
+.form{
+  padding: 1rem;
+}
+
+.form-col{
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  flex-direction: column;
+}
+
+.form-label{
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.form-input{
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+}
+
+.form-input:focus{
+  outline: none;
+}
+
+select.form-input{
+  width: 100%;
+  background-color: white;
+}
+
+.form-button-container{
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+.form-button{
+  padding: 1rem;
+  background-color: black;
+  color: white;
+  font-weight: 800;
+  border: none;
+  width: 100%;
+  border-radius:5px;
+}
+
+.whatsapp-button {
+  display: inline-block;
+  padding: 5px 20px;
+  background-color: var(--color-1-75);
+  color: #fff;
+  text-decoration: none;
+  margin-top: 30px;
+  border-radius: 5px;
+  font-weight: bold;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+.whatsapp-button:hover {
+  background-color: #128c7e;
+}
+/* END CONTACT CSS */

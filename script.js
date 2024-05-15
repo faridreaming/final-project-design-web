@@ -17,22 +17,22 @@ const pages = {
     <div class="container">
       <article>
         <h1>Kerja Kami</h1>
+        <img src="assets/imgs/2.webp" alt="Foog Blog" class="figure" />
         <p>
           Kami adalah sebuah tim yang berdedikasi tinggi dalam memberikan informasi seputar makanan dan minuman. Kami berusaha untuk memberikan informasi yang
           akurat dan terpercaya kepada para pengunjung kami. Kami senantiasa menghadirkan rekomendasi terbaru, tips menarik, dan ulasan terkini seputar
           kuliner. Dengan berbagai macam menu yang kami sajikan, kami ingin memastikan bahwa setiap pengunjung dapat menemukan makanan dan minuman favorit
           mereka di sini. Jadi, jangan ragu untuk menjelajahi berbagai menu yang kami sajikan!
         </p>
-        <img src="assets/imgs/2.webp" alt="Foog Blog" class="figure" />
       </article>
       <article>
         <h1>Kenapa Pilih Kami</h1>
+        <img src="assets/imgs/3.webp" alt="Foog Blog" class="figure" />
         <p>
           Kami memiliki berbagai macam makanan dan minuman yang bisa kamu pilih. Kami juga memberikan informasi yang akurat dan terpercaya kepada para
           pengunjung kami. Selain itu, kami senantiasa menghadirkan rekomendasi terbaru dan tips menarik seputar kuliner. Jadi, jangan ragu untuk menjelajahi
           berbagai menu yang kami sajikan!
         </p>
-        <img src="assets/imgs/3.webp" alt="Foog Blog" class="figure" />
       </article>
     </div>
   </main>
@@ -85,6 +85,45 @@ const pages = {
             </a>
           </div>
         </div>
+      </div>
+    </div>
+  </main>
+  `,
+  contact: `
+  <main>
+    <div class="container contact">
+      <div class="contact-text">
+        <h1><i>Kontak Kami</i></h1>
+        <hr class="costum-hr" />
+        <p>Jika ada masalah silahkan klik tombol hubungi tersebut</p>
+        <a href="https://wa.me/+6282273197018" class="btn">Hubungi Kami</a>
+      </div>
+      <div class="main-content-left">
+        <div class="contact-dsc">
+          <h3 class="contact-title"><i>Kontak Kami</i></h3>
+          <p class="contact-paragraf">Kami akan menghubungi anda 1x24 jam setelah data kami terima.</p>
+        </div>
+        <form id="contactForm" class="main-contact-form" onsubmit="sendEmail(event)">
+          <div class="form-col">
+            <label for="name" class="form-label">Nama kamu:</label>
+            <input type="text" placeholder="Nama Lengkap" class="input-name" id="input-name" required autocomplete="name" />
+          </div>
+          <div class="form-col">
+            <label for="email" class="form-label">Alamat Email:</label>
+            <input type="email" placeholder="example@email.com" class="input-email" inputmode="email" id="input-email" required autocomplete="email" />
+          </div>
+          <div class="form-col">
+            <label for="email" class="form-label">Subject Masalah:</label>
+            <input type="text" placeholder="Subject" class="input-subject" id="input-subject" required />
+          </div>
+          <div class="form-col">
+            <label for="keluhan" class="form-label">Tuliskan Keluhan:</label>
+            <textarea name="keluhan" cols="30" rows="10" placeholder="Tuliskan Keluhan" class="input-message" id="input-message" required></textarea>
+          </div>
+          <div class="form-button-container">
+            <button class="form-button btn" type="submit">Kirim</button>
+          </div>
+        </form>
       </div>
     </div>
   </main>
@@ -341,9 +380,9 @@ document.addEventListener("DOMContentLoaded", function () {
     case "about":
       handlePage("Tentang Kami", 1, pages.about);
       break;
-    // case "contact":
-    //   handlePage("Kontak", 2, "Contact Food Blog!");
-    //   break;
+    case "contact":
+      handlePage("Kontak", 2, pages.contact);
+      break;
     case "list":
       handlePage("Daftar Menu", 3, pages.list);
       break;
@@ -361,75 +400,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // FUNCTIONS
 function handlePage(pageTitle, pageNumber, content) {
-  document.querySelector("title").innerText = `Food Blog | ${pageTitle}`;
+  document.title = `Food Blog | ${pageTitle}`;
   document.querySelector(".page-title").innerText = pageTitle;
   document.querySelectorAll(".navbar ul li a")[pageNumber].classList.add("active");
   document.querySelector(".content").innerHTML = content;
 }
 
-// Contact
-const form = document.getElementById("contactForm");
-const fullName = document.getElementById("input-name");
-const email = document.getElementById("input-email");
-const subject = document.getElementById("input-subject");
-const mess = document.getElementById("input-message");
-
-function sendEmail(event) {
-  event.preventDefault(); // Prevent the form from submitting the default way
-
-  const bodyMessage = `
-  <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f9f9f9; padding: 20px;">
-  <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); overflow: hidden;">
-    <div style="background-color: #007bff; color: #ffffff; padding: 20px; text-align: center;">
-      <h2 style="margin: 0; font-size: 24px;">Contact Form Submission</h2>
-    </div>
-    <div style="padding: 20px; color: #333333;">
-      <p style="margin-bottom: 10px; font-size: 18px;"><strong>Nama:</strong> ${fullName.value}</p>
-      <p style="margin-bottom: 10px; font-size: 18px;"><strong>Email:</strong> ${email.value}</p>
-      <p style="margin-bottom: 10px; font-size: 18px;"><strong>Pesan:</strong> ${mess.value}</p>
-    </div>
-    <div style="background-color: #007bff; color: #ffffff; text-align: center; padding: 10px;">
-      <span style="font-size: 14px;">&copy; KELOMPOK 3</span>
-    </div>
-  </div>
-</div>
-  `;
-
-  Email.send({
-    SecureToken: "f30bd810-90ca-4533-abfd-eefc6afbacaf",
-    Host: "smtp.elasticemail.com",
-    Username: "ahmadrezaauliasiregar@gmail.com",
-    Password: "D4008A897D300253CD55C0CC6571E1EAF883",
-    To: 'ahmadrezaauliasiregar@gmail.com',
-    From: "ahmadrezaauliasiregar@gmail.com",
-    Subject: subject.value,
-    Body: bodyMessage
-  }).then(
-    message => {
-      if (message === 'OK') {
-        alert("oke, terimakasih akan kami perbaiki🙏");
-        window.location.href = 'app.html?page=contact'; // Ganti dengan URL halaman kontak Anda
-      } else {
-        alert("maaf coba lagi");
-        window.location.href = 'app.html?page=contact'; // Ganti dengan URL halaman kontak Anda
-      }
-    }
-  ).catch(
-    error => {
-      alert("maaf ada coba lagi");
-      console.error("Error:", error);
-      window.location.href = 'app.html?page=contact'; // Ganti dengan URL halaman kontak Anda
-    }
-  );
-}
-
-form.addEventListener("submit", sendEmail);
-
-
-document.addEventListener("visibilitychange", function () {
-  if (document.visibilityState === "visible") {
-    document.title = "Food Blog || :v";
-  } else {
-    document.title = "Please Come Back! 😔";
-  }
+// CONTACT
+const contactForm = document.getElementById("contactForm");
+contactForm.addEventListener("submit", () => {
+  alert("Terima kasih telah menghubungi kami!");
 });

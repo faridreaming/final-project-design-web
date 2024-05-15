@@ -324,3 +324,154 @@ footer {
   background-color: var(--color-s-1);
   color: var(--color-4);
 }
+
+/* CONTACT CSS */
+.container.contact {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.contact-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-text p {
+  padding-top: 1rem;
+}
+
+.costum-hr {
+  width: 20%;
+  margin: 0 auto;
+  border: 2px solid #333;
+}
+
+.main-content-left {
+  display: flex;
+  padding: 1rem;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--color-3-75);
+  border-radius: 28px;
+  margin-right: 100px;
+  margin-bottom: 20px;
+}
+
+.contact-dsc {
+  padding: 1rem;
+}
+
+.contact-title {
+  font-size: 24px;
+  margin-left: 10px;
+}
+
+.form {
+  padding: 1rem;
+}
+
+.form-col {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  flex-direction: column;
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+.input-name,
+.input-email,
+.input-subject,
+.input-message {
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+}
+
+.input-name,
+.input-email,
+.input-subject,
+.input-message:focus {
+  outline: none;
+}
+
+.form-button-container {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+.form-button {
+  padding: 1rem;
+  color: white;
+  font-weight: 800;
+  border: none;
+  width: 100%;
+  border-radius: 5px;
+  justify-content: center;
+}
+
+.contact-paragraf {
+  margin: 10px;
+}
+
+.form {
+  padding: 1rem;
+}
+
+.form-col {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  flex-direction: column;
+}
+
+.form-col textarea {
+  display: flex;
+  resize: none;
+  font-family: "Poppins", sans-serif;
+}
+
+.form-label {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.form-input {
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+}
+
+.form-input:focus {
+  outline: none;
+}
+
+select.form-input {
+  width: 100%;
+  background-color: white;
+}
+
+.form-button-container {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+/* END CONTACT CSS */
+
+.halal {
+  filter: brightness(10%) invert(100%);
+}

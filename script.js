@@ -91,37 +91,34 @@ const pages = {
   `,
   contact: `
   <main>
-    <div class="container contact">
-      <div class="contact-text">
-        <h1><i>Kontak Kami</i></h1>
-        <hr class="costum-hr" />
-        <p>Jika ada masalah silahkan klik tombol hubungi tersebut</p>
-        <a href="https://wa.me/+6282273197018" class="btn">Hubungi Kami</a>
-      </div>
-      <div class="main-content-left">
-        <div class="contact-dsc">
-          <h3 class="contact-title"><i>Kontak Kami</i></h3>
-          <p class="contact-paragraf">Kami akan menghubungi anda 1x24 jam setelah data kami terima.</p>
+    <div class="container">
+      <div class="contact">
+        <div class="contact-text">
+          <h1>Kontak Kami</h1>
+          <p>Jika Anda memiliki pertanyaan, jangan ragu untuk menghubungi kami. Kami akan dengan senang hati membantu Anda.</p>
+          <a href="https://wa.me/6282273197018" class="btn" target="_blank">Hubungi Kami</a>
         </div>
-        <form id="contactForm" class="main-contact-form" onsubmit="sendEmail(event)">
-          <div class="form-col">
-            <label for="name" class="form-label">Nama kamu:</label>
-            <input type="text" placeholder="Nama Lengkap" class="input-name" id="input-name" required autocomplete="name" />
-          </div>
-          <div class="form-col">
-            <label for="email" class="form-label">Alamat Email:</label>
-            <input type="email" placeholder="example@email.com" class="input-email" inputmode="email" id="input-email" required autocomplete="email" />
-          </div>
-          <div class="form-col">
-            <label for="email" class="form-label">Subject Masalah:</label>
-            <input type="text" placeholder="Subject" class="input-subject" id="input-subject" required />
-          </div>
-          <div class="form-col">
-            <label for="keluhan" class="form-label">Tuliskan Keluhan:</label>
-            <textarea name="keluhan" cols="30" rows="10" placeholder="Tuliskan Keluhan" class="input-message" id="input-message" required></textarea>
-          </div>
-          <div class="form-button-container">
-            <button class="form-button btn" type="submit">Kirim</button>
+        <form class="contact-form">
+          <h2>Kirim Pertanyaan/Keluhan</h2>
+          <p>Kami akan menghubungi anda 1x24 jam setelah data anda kami terima.</p>
+          <div class="input-group-wrapper">
+            <div class="input-group">
+              <label for="name"><h3>Nama Kamu:</h3></label>
+              <input type="text" id="name" name="name" placeholder="Nama Lengkap" required />
+            </div>
+            <div class="input-group">
+              <label for="email"><h3>Alamat Email:</h3></label>
+              <input type="email" id="email" name="email" placeholder="someone@example.com" required />
+            </div>
+            <div class="input-group">
+              <label for="subject"><h3>Subject Masalah</h3></label>
+              <input type="text" id="subject" name="subject" placeholder="Subject" required />
+            </div>
+            <div class="input-group">
+              <label for="keluhan"><h3>Tuliskan Keluhan:</h3></label>
+              <textarea id="keluhan" name="keluhan" placeholder="Keluhan Anda" rows="8" required></textarea>
+            </div>
+            <button class="btn">Kirim Pesan</button>
           </div>
         </form>
       </div>

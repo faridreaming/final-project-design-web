@@ -392,9 +392,9 @@ document.addEventListener("DOMContentLoaded", function () {
     case "drinks":
       handlePage("Minuman", 5, pages.drinks);
       break;
-    // default:
-    //   handlePage("", undefined, "Page not found!");
-    //   break;
+    default:
+      handlePage("Beranda", 0, pages.home);
+      break;
   }
 });
 
@@ -408,6 +408,7 @@ function handlePage(pageTitle, pageNumber, content) {
 
 // CONTACT
 const contactForm = document.getElementById("contactForm");
-contactForm.addEventListener("submit", () => {
-  alert("Terima kasih telah menghubungi kami!");
-});
+if (contactForm)
+  contactForm.addEventListener("submit", () => {
+    alert("Terima kasih telah menghubungi kami!");
+  });

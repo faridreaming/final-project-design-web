@@ -409,3 +409,12 @@ if (contactForm)
   contactForm.addEventListener("submit", () => {
     alert("Terima kasih telah menghubungi kami!");
   });
+
+// TOGGLE NAVBAR
+const toggleNavbar = document.querySelector(".toggle-navbar");
+const navbar = document.querySelector(".navbar");
+
+toggleNavbar.addEventListener("click", () => {
+  navbar.classList.toggle("active");
+  toggleNavbar.src = navbar.classList.contains("active") ? "assets/icons/close.svg" : "assets/icons/menu.svg";
+});

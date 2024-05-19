@@ -401,14 +401,12 @@ function handlePage(pageTitle, pageNumber, content) {
   document.querySelector(".page-title").innerText = pageTitle;
   document.querySelectorAll(".navbar ul li a")[pageNumber].classList.add("active");
   document.querySelector(".content").innerHTML = content;
+  const contactForm = document.querySelector(".contact-form");
+  if (contactForm)
+    contactForm.addEventListener("submit", () => {
+      alert("Terima kasih telah menghubungi kami!");
+    });
 }
-
-// CONTACT
-const contactForm = document.getElementById("contactForm");
-if (contactForm)
-  contactForm.addEventListener("submit", () => {
-    alert("Terima kasih telah menghubungi kami!");
-  });
 
 // TOGGLE NAVBAR
 const toggleNavbar = document.querySelector(".toggle-navbar");

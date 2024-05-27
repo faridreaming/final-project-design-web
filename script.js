@@ -8,8 +8,8 @@ const pages = {
       <h1>Selamat datang di Food Blog!</h1>
       <p>Temukan berbagai makanan dan minuman favoritmu di sini.</p>
       <div class="hero-btn-wrapper">
-        <a href="app.html?page=foods" class="btn">Jelajai Makanan</a>
-        <a href="app.html?page=drinks" class="btn btn-outline">Jelajai Minuman</a>
+        <a href="app.html?page=foods" class="btn">Jelajahi Makanan</a>
+        <a href="app.html?page=drinks" class="btn btn-outline">Jelajahi Minuman</a>
       </div>
     </div>
   </section>

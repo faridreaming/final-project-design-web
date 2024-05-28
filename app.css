@@ -7,6 +7,15 @@
   --color-dark-75: #1a1a1abe;
   --color-dark-50: #1a1a1a80;
   --color-dark-25: #1a1a1a40;
+  --color-dark-2: #222831;
+  --color-dark-2-75: #222831be;
+  --color-dark-2-50: #22283180;
+  --color-dark-2-25: #22283140;
+  --color-dark-3: #31363F;
+  --color-dark-s: #76ABAE;
+  --color-dark-s-75: #76ABAEbe;
+  --color-dark-s-50: #76ABAE80;
+  --color-dark-s-25: #76ABAE40;
   --color-1: #dd761c;
   --color-1-75: #dd761cbe;
   --color-1-50: #dd761c80;
@@ -88,11 +97,21 @@ header .container {
   align-items: center;
 }
 
-.toggle-navbar {
+.menu-wrapper {
+  display: flex;
+  gap: 1rem;
+  padding-left: 1rem;
+}
+
+.toggle-navbar,
+.toggle-dark-mode {
   cursor: pointer;
   border: 0.1rem solid var(--color-4-75);
   border-radius: var(--basic-border-radius);
   width: 2rem;
+}
+
+.toggle-navbar {
   display: none;
 }
 
@@ -407,10 +426,71 @@ footer {
   resize: vertical;
 }
 
-.input-group texa footer {
-  text-align: center;
-  background-color: var(--color-s-1);
+.dark {
+  background-color: var(--color-dark-3);
   color: var(--color-4);
+}
+
+.dark header {
+  background-color: var(--color-dark-2);
+  border-color: transparent;
+}
+
+.dark footer {
+  background-color: var(--color-dark-2);
+}
+
+.dark .hero {
+  background-image: url(assets/imgs/hero-dark.webp);
+}
+
+.dark .hero .container h1 {
+  text-shadow: 0 0 .5rem var(--color-dark-25);
+}
+
+.dark .hero .container p {
+  text-shadow: 0 0 0.25rem var(--color-dark-50);
+}
+
+.dark .btn:not(.btn-outline) {
+  background-color: var(--color-dark-s);
+}
+
+.dark .btn:not(.btn-outline):hover {
+  background-color: hsl(180, 100%, 30%);
+}
+
+.dark .card {
+  background-color: var(--color-dark-2);
+  border-color: var(--color-dark-s-25);
+}
+
+.dark .card:hover {
+  border-color: var(--color-dark-s-50);
+}
+
+.dark .contact-form {
+  background-color: var(--color-dark-2-25);
+  border-color: var(--color-dark-s-25);
+}
+
+.dark .navbar ul li a:hover,
+.dark .navbar ul li a.active {
+  text-decoration-color: var(--color-dark-s);
+}
+
+.dark table,
+.dark th,
+.dark td {
+  border-color: var(--color-4);
+}
+
+.dark .food-list table th {
+  background-color: var(--color-dark-s-50);
+}
+
+.dark .drink-list table th {
+  background-color: var(--color-dark-s-25);
 }
 
 @media screen and (max-width: 859px) {
@@ -419,14 +499,17 @@ footer {
     justify-content: center;
     width: 100%;
   }
+
   .navbar {
     display: none;
     opacity: 0;
   }
+
   .navbar.active {
     display: block;
     opacity: 1;
   }
+
   .toggle-navbar {
     display: block;
   }
@@ -436,6 +519,7 @@ footer {
   .logo p:not(.page-title) {
     display: none;
   }
+
   .hero .hero-btn-wrapper {
     flex-direction: column;
   }

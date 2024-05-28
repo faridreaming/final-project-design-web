@@ -416,3 +416,22 @@ toggleNavbar.addEventListener("click", () => {
   navbar.classList.toggle("active");
   toggleNavbar.src = navbar.classList.contains("active") ? "assets/icons/close.svg" : "assets/icons/menu.svg";
 });
+
+// TOGGLE DARK MODE
+const body = document.body;
+const toggleDarkMode = document.querySelector(".toggle-dark-mode");
+const darkMode = localStorage.getItem("darkMode");
+
+if (darkMode === "true") {
+  body.classList.add("dark");
+  toggleDarkMode.src = "assets/icons/light-mode.svg";
+} else {
+  toggleDarkMode.src = "assets/icons/dark-mode.svg";
+}
+
+toggleDarkMode.addEventListener("click", () => {
+  body.classList.toggle("dark");
+  const isDarkMode = body.classList.contains("dark");
+  toggleDarkMode.src = isDarkMode ? "assets/icons/light-mode.svg" : "assets/icons/dark-mode.svg";
+  localStorage.setItem("darkMode", isDarkMode);
+});
